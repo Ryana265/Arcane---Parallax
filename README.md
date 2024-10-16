@@ -4,7 +4,7 @@ I created the **Arcane Parallax** website as a personal project to understand ho
 
 ## Demo
 
-You can view the live demo of this project [here](#).
+You can view the live demo of this project [here]([#](https://ryana265.github.io/Arcane---Parallax/)).
 
 ## Features
 
