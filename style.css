@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+}
+
+.parallax__container {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.parallax__container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 7rem;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.parallax__container img {
+  position: absolute;
+}
+
+.parallax__container h1 {
+  position: relative;
+  top: 88%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  font-weight: 900;
+  color: rgb(183, 41, 41);
+}
+
+.parallax__containertwo {
+  position: relative;
+  background-color: #000; /* Optional: adjust based on design */
+}
+
+.parallax__containertwo img {
+  width: 100%;
+  display: block;
+}
+
+#city-progress {
+  position: absolute;
+  top: 60vh; /* Adjust as needed */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(218, 210, 198);
+  font-size: 10vh;
+  z-index: 2;
+  line-height: 35vh;
+  text-align: center;
+}
+
+.image__gallery {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  /* position: relative; Ensure it's positioned relative to the container */
+  padding: 2rem; /* Optional: adjust spacing */
+}
+
+.image__card {
+  opacity: 0;
+  transition: opacity 0.3s ease; 
+}
+
+.image__card img {
+  border-radius: 1rem;
+  width: 100%; /* Ensure images fit within the card */
+}
+
+span {
+  color: rgb(183, 41, 41);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  font-size: xx-large;
+  text-shadow: 0 0 5px rgb(157, 50, 24), 0 0 10px rgb(157, 50, 24), 0 0 20px rgb(157, 50, 24);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+span:hover {
+  color: rgb(255, 69, 0);
+  transform: scale(1.2);
+  font-size: 7vh;
+}
+
+.about {
+  min-height: 125vh;
+  background-color: #000000;
+  display: grid;
+  place-content: center;
+}
+
+.details {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 8rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.footer__btn {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.learn__more {
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+}

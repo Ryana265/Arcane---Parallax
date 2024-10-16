@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Arcane</title>
+  </head>
+  <body>
+    <div class="parallax__container">
+      <img height="700vh"  src="https://preview.redd.it/s1-spoilers-saddest-frames-of-arcane-v0-mc7torn78f9a1.png?width=640&crop=smart&auto=webp&s=d48744071f4a463b08277a5b8f91f20969249229" alt="parallax" />
+      <img id="bg-2" src="./images/qejzvmh681181 (1)_processed (1).jpg" alt="parallax" />
+      <h1 id="title">Arcane</h1>
+      <img  id="bg-3" src="./images/arcane-jinx-league-of-legends-league-of-legends-riot-games-4k-hd-wallpaper-preview_processed.jpg" alt="parallax" />
+    </div>
+    <section class="about">
+      <div  class="details">
+        <h2 style="text-align: center;">A <span>HOUSE</span> DIVIDED</h2>
+        <br>
+        <br>
+        <p style="text-align: center;">Two <span>sisters</span>. Two <span>cities</span>. One discovery that will change the world forever.In the cities of <span>Piltover</span> and <span>Zaun</span>, unrest stirs as inventors and thieves, politicians and crime lords chafe against the constraints of a society torn asunder. As dissent reaches a fever pitch, two sisters steal an artifact of untold power. Discovery and danger intertwine as heroes are born and bonds are broken. Will this <span>power</span> change the world, or lead it to ruin?<br> <br> This is the world of  <span>Arcane</span>.
+        </p>
+      </div>
+    </section>
+    <div class="parallax__containertwo">
+      <img width="100%" src="https://assetcdn.rgpub.io/public/live/forge-archive-hosting/arcane/2cc20e22db81f2734b68c42e2667124c.jpg" alt="City of Progress" />
+      <h2 id="city-progress">THE CITY OF PROGRESS</h2>
+      <div class="image__gallery">
+        <div class="image__card" id="image__card-1">
+          <img src="https://static.wikia.nocookie.net/leagueoflegends/images/c/c7/Vi_Arcane_3_Render.png/revision/latest?cb=20220215063454" alt="Character 1" />
+          <p>Character 1: Vi</p>
+        </div>
+        <div class="image__card" id="image__card-2">
+          <img src="assets/character2.jpg" alt="Character 2" />
+          <p>Character 2: Jinx</p>
+        </div>
+        <div class="image__card" id="image__card-3">
+          <img src="assets/character3.jpg" alt="Character 3" />
+          <p>Character 3: Jayce</p>
+        </div>
+        <div class="image__card" id="image__card-4">
+          <img src="assets/character4.jpg" alt="Character 4" />
+          <p>Character 4: Caitlyn</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var title = document.getElementById("title");
+      var bg_2 = document.getElementById("bg-2");
+      var bg_3 = document.getElementById("bg-3");
+      var cityProgress = document.getElementById("city-progress");
+
+      var image_card_1 = document.getElementById("image__card-1");
+      var image_card_2 = document.getElementById("image__card-2");
+      var image_card_3 = document.getElementById("image__card-3");
+      var image_card_4 = document.getElementById("image__card-4");
+
+      document.addEventListener("scroll", (event) => {
+        var positionY = window.scrollY;
+
+        title.style.fontSize = `${100 + positionY * 0.2}px`;
+
+        bg_2.style.top = `-${positionY * 0.24}px`;
+        bg_3.style.top = `-${positionY}px`;
+        bg_3.style.scale = 1 + positionY * 0.001;
+        if (cityProgress) {
+        cityProgress.style.fontSize = `${20 + positionY * 0.1}px`;
+          }
+        });
+        image_card_1.style.transform = `translateY(${
+          positionY * -0.5 + 400
+        }px)`;
+
+        image_card_2.style.transform = `translateY(${positionY * 0.1 + -50}px)`;
+
+        image_card_3.style.transform = `translateY(${
+          positionY * -0.1 + 100
+        }px)`;
+
+        image_card_4.style.transform = `translateY(${
+          positionY * 0.2 + -125
+        }px)`;
+
+        var _newOpacity = positionY * 0.001;
+        if (_newOpacity >= 0 && _newOpacity <= 1) {
+          image_card_1.style.opacity = _newOpacity;
+          image_card_2.style.opacity = _newOpacity;
+          image_card_3.style.opacity = _newOpacity;
+          image_card_4.style.opacity = _newOpacity;
+        };
+    </script>
+  </body>
+</html>
